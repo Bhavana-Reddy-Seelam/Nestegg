@@ -1,0 +1,339 @@
+.admin-dashboard {
+  padding: 40px;
+  min-height: 100vh;
+  background: #f5f7f2;
+  color: #263528;
+  font-family: Arial, sans-serif;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+
+.admin-header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.admin-header p {
+  color: #777;
+}
+
+.refresh-btn {
+  padding: 12px 22px;
+  background: #315c35;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid #668d50;
+}
+
+.stat-card h3 {
+  font-size: 15px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.stat-card h2 {
+  font-size: 27px;
+  color: #315c35;
+}
+
+.orders-container {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.orders-container h2 {
+  margin-bottom: 20px;
+}
+
+.orders-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 950px;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+.orders-table th {
+  background: #edf3e9;
+  color: #315c35;
+}
+
+.orders-table tr:hover {
+  background: #fafcf8;
+}
+
+.status-select {
+  padding: 9px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  background: white;
+  font-size: 12px;
+}
+
+.status-select.pending {
+  color: #b7791f;
+}
+
+.status-select.confirmed {
+  color: #2563eb;
+}
+
+.status-select.preparing {
+  color: #9333ea;
+}
+
+.status-select.out-for-delivery {
+  color: #ea580c;
+}
+
+.status-select.delivered {
+  color: #15803d;
+}
+
+.no-orders,
+.admin-loading {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+}
+
+.admin-error {
+  color: #dc2626;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 18px;
+  }
+
+  .admin-header {
+    align-items: flex-start;
+  }
+
+  .admin-header h1 {
+    font-size: 24px;
+  }
+
+  .stat-card {
+    padding: 18px;
+  }
+
+  .orders-container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-header {
+    flex-direction: column;
+  }
+
+  .admin-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .stat-card h2 {
+    font-size: 21px;
+  }
+}
+/* Admin Login */
+
+.admin-login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7f2;
+  padding: 20px;
+}
+
+.admin-login-box {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.admin-login-box h1 {
+  color: #315c35;
+  margin-bottom: 20px;
+}
+
+.admin-login-box h2 {
+  margin-bottom: 10px;
+}
+
+.admin-login-box p {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.admin-login-box input {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  box-sizing: border-box;
+}
+
+.admin-login-box button {
+  width: 100%;
+  padding: 13px;
+  background: #315c35;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.admin-login-box button:hover {
+  background: #234527;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.logout-btn {
+  padding: 12px 22px;
+  background: #c0392b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.admin-login-box .admin-error {
+  color: #dc2626;
+}
+.admin-reviews-container {
+  margin-top: 40px;
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.admin-reviews-container h2 {
+  color: #382719;
+}
+
+.admin-review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.admin-review-card {
+  padding: 22px;
+  border: 1px solid #eadfce;
+  border-radius: 12px;
+  background: #fffaf1;
+  overflow-wrap: anywhere;
+}
+
+.admin-review-card h3 {
+  color: #382719;
+}
+
+.admin-review-card p {
+  line-height: 1.6;
+}
+
+.admin-review-card small {
+  display: block;
+  margin-top: 10px;
+  color: #85776b;
+}
+
+.review-status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.review-status.pending {
+  background: #fff0c9;
+  color: #8a5c00;
+}
+
+.review-status.approved {
+  background: #d9f4df;
+  color: #216c35;
+}
+
+.review-status.rejected {
+  background: #ffe0e0;
+  color: #a12b2b;
+}
+
+.review-admin-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.approve-review-btn,
+.reject-review-btn {
+  padding: 9px 13px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.approve-review-btn {
+  background: #287b43;
+  color: white;
+}
+
+.reject-review-btn {
+  background: #b83b3b;
+  color: white;
+}
